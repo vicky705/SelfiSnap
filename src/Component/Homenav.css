@@ -35,10 +35,10 @@ body{
 .homenav .inner .menu ul li a{
     font-size: 17px;
     font-weight: 500;
+    transition: .3s ease-in-out;
 }
 .homenav .inner .menu ul li:hover a{
     color: aqua;
-    transition: .3s ease-in-out;
     cursor: pointer;
 }
 .homenav .inner .mobile{
@@ -182,10 +182,10 @@ body{
     backdrop-filter: blur(10px);
     margin-top: 10px;
     box-sizing: border-box;
+    transition: .3s ease-in-out;
 }
 .price .price-card:hover{
     margin-top: -20px;
-    transition: .3s ease-in-out;
     box-shadow: 2px 2px 10px 2px #00b8b84e;
 }
 .price .price-card .card-price p{

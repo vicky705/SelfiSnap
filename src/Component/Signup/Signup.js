@@ -61,10 +61,10 @@ function Signup() {
       const json = await response.json()
       // console.log(json)
       if(json.status){
-        localStorage.setItem('PhotographerId', json.authToken)
+        // localStorage.setItem('PhotographerId', json.authToken)
         updatePhotographerId()
         toastAMessage('Login Successfully.')
-        navigate('/')
+        navigate('/login')
       }
       else{
         console.log(json.message)
