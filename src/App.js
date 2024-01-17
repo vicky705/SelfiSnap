@@ -9,7 +9,6 @@ import Image from './Component/Image';
 import Login from './Component/Signup/Login';
 import Signup from './Component/Signup/Signup';
 import dataContext from './Context/dataContext';
-import Mainhome from './Component/Mainhome';
 import Homenav from './Component/Homenav'
 
 function App() {

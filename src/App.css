@@ -406,6 +406,11 @@ nav p{
   top: -33px;
   right: 10px;
 }
+.outer-form .back-btn{
+  background-color: #233b6b;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
 @media screen and (max-width: 992px) {
     .inner-form .form{
         width: 300px;

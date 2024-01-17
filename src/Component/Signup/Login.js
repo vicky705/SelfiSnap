@@ -82,6 +82,7 @@ function Login() {
                         <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                             <div className="form">
                                 <div className="heading">
+                                    <h2 className='text-center'>SelfiSnap</h2>
                                     <p className='login'>Login</p>
                                     <p>Stay with login and enjoy our Products. We appreciate your subscription.</p>
                                 </div>
@@ -103,6 +104,7 @@ function Login() {
                                         <button className='btn login-btn' type='submit'>Login</button>
                                         <p className='text-center'>Does not have account yet? <Link to='/signup'>Register</Link></p>
                                     </form>
+                                    <Link className='back-btn' to={'/'}>Go To Home</Link>
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import dataContext from '../Context/dataContext'
 import Imagecard from './Imagecard'
 import { DialogContent, DialogTitle, Dialog, DialogActions, Button } from '@mui/material'
+import { ToastContainer, toast } from 'react-toastify'
 import axios from 'axios'
 const url = 'http://localhost:4000/api/user'
 // const url = "https://44bxzm91-4000.inc1.devtunnels.ms/api/user"
@@ -21,10 +22,23 @@ function Image() {
   const [file, setFile] = useState()
   const fileOnChange = (event) => {
     setFile(event.target.files[0])
-    
   }
   let formData
   const onUpload = async() => {
+    let ext = file.name.split('.').pop();
+    const extes = ["jpg", "png", "jpeg","webp"];
+    if(!extes.includes(ext)){
+      return toast.warn("Invalid File.", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        })
+    }
      formData = {
       folderId: phId,
       photographerId : userId,
@@ -38,6 +52,16 @@ function Image() {
     .then((response) => {
       const data = response.data
       addNewPhoto(data.data);
+      toast.success("Image uploaded", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        })
     })
     .catch((error) => {
       console.log(error)
@@ -47,6 +71,7 @@ function Image() {
 
   return (
     <main className='main-container'>
+    <ToastContainer />
         <div className='d-flex'>
         <h2>Photos</h2><div className='addFolderBtn' onClick={handleClickOpen}><p><i className="fa-regular fa-add"></i> Add</p></div>
         </div>

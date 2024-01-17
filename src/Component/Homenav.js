@@ -16,10 +16,10 @@ const Homenav = () => {
                 <div className={`menu ${isActive ? 'active' : ''}`}>
                     <ul>
                         <li><a href='#home'>Home</a></li>
-                        <li><a>About</a></li>
-                        <li><a>Service</a></li>
+                        {/* <li><a>About</a></li> */}
+                        {/* <li><a>Service</a></li> */}
                         <li><a href='#price'>Price</a></li>
-                        <li><a>Contact Us</a></li>
+                        {/* <li><a>Contact Us</a></li> */}
                         <li className='getStart'><Link to='/login'>Get Start</Link></li>
                     </ul>
                 </div>

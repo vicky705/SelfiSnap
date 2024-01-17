@@ -8,8 +8,8 @@ function Header({OpenSidebar}) {
             <i className="fa-solid fa-bars-staggered" onClick={OpenSidebar}></i>
         </div>
         <div className='header-left'>
-            <input type='text' placeholder='Search here....'/>
-            <i className="fa-solid fa-magnifying-glass"></i>
+            {/* <input type='text' placeholder='Search here....'/> */}
+            {/* <i className="fa-solid fa-magnifying-glass"></i> */}
         </div>
         
     </header>
